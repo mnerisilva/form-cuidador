@@ -3,7 +3,17 @@ import React from 'react'
 const TabProfile = () => {
     return (
         <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+            <form className="form-inline">
+            <div className="form-group mb-2">
+                <label htmlFor="staticEmail2" className="sr-only">Email</label>
+                <input type="text" className="form-control-plaintext" id="staticEmail2" />
+            </div>
+            <div className="form-group mx-sm-3 mb-2">
+                <label htmlFor="inputPassword2" className="sr-only">Password</label>
+                <input type="password" className="form-control" id="inputPassword2" placeholder="Password" />
+            </div>
+            <button type="submit" className="btn btn-primary mb-2">Confirm identity</button>
+            </form>            
         </div>   
     );
 }

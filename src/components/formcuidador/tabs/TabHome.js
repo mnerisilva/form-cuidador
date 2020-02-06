@@ -4,13 +4,20 @@ const TabHome = () => {
     return (
         <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <form style={{paddingTop: 50}}>
-                <div className="form-group">
-                    <label htmlFor="exampleFormControlInput1">CPF</label>
-                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="cpf" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="nome">Nome</label>
-                    <input type="text" className="form-control" id="nome" placeholder="nome e sobrenome" />
+                <h3 style={{backgroundColor: "#dadada"}}>Dados pessoais</h3>
+                <div className="row">
+                    <div className="form-group col-md-4">
+                        <label htmlFor="exampleFormControlInput1">CPF</label>
+                        <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="nome">Nome</label>
+                        <input type="text" className="form-control" id="nome" placeholder="" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="nome">Email</label>
+                        <input type="email" className="form-control" id="nome" placeholder="" />
+                    </div>
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleFormControlSelect1">Example select</label>
