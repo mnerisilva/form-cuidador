@@ -4,7 +4,7 @@ const TabHome = () => {
     return (
         <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <form style={{paddingTop: 50}}>
-                <h3 style={{backgroundColor: "#dadada"}}>Dados pessoais</h3>
+                <h3 className="dark alert-dark">Dados pessoais</h3>
                 <div className="row">
                     <div className="form-group col-md-4">
                         <label htmlFor="exampleFormControlInput1">CPF</label>
