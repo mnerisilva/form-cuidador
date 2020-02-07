@@ -1,10 +1,15 @@
 import React from 'react'
 
+import StarScore from '../StarScore'
+
 const TabHome = () => {
     return (
-        <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style={{border: "solid thin #dadada", paddingLeft: 10, paddingRight: 10, paddingBottom: 25}}>
+        <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <StarScore />
+        <div className="row col-md-12" style={{background: "#dadada"}}>                    
+            <h3 className="dark alert-dark" style={{padding: 8}}>Dados pessoais</h3>
+        </div>
             <form style={{paddingTop: 50}}>
-                <h3 className="dark alert-dark" style={{padding: 8}}>Dados pessoais</h3>
                 <div className="row">
                     <div className="form-group col-md-2">
                         <label htmlFor="exampleFormControlInput1">CPF</label>
