@@ -2,9 +2,9 @@ import React from 'react'
 
 const TabHome = () => {
     return (
-        <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style={{border: "solid thin #dadada", paddingLeft: 10, paddingRight: 10, paddingBottom: 25}}>
             <form style={{paddingTop: 50}}>
-                <h3 className="dark alert-dark">Dados pessoais</h3>
+                <h3 className="dark alert-dark" style={{padding: 8}}>Dados pessoais</h3>
                 <div className="row">
                     <div className="form-group col-md-2">
                         <label htmlFor="exampleFormControlInput1">CPF</label>
@@ -15,8 +15,8 @@ const TabHome = () => {
                         <input type="text" className="form-control" id="nome" placeholder="" />
                     </div>
                     <div className="form-group col-md-5">
-                        <label htmlFor="nome">Email</label>
-                        <input type="email" className="form-control" id="nome" placeholder="" />
+                        <label htmlFor="email">Email</label>
+                        <input type="email" className="form-control" id="email" placeholder="" />
                     </div>
                 </div>
                 <div className="row">
@@ -65,12 +65,9 @@ const TabHome = () => {
                         <input type="text" className="form-control" id="uf" placeholder="" />
                     </div>
                 </div>
-
-
-
                 <div className="row">
-                    <div className="form-group col-md-6">
-                      <div className="sex-wrapper" style={{border: "solid thin"}}>
+                    <div className="form-group col-md-4">
+                      <div className="sex-wrapper" style={{backgroundColor: "#dadada1a", border: "solid thin #dadada", paddingLeft: 10, height: "4.4em"}}>
                         <div className="form-check form-check-inline">
                             <span style={{paddingRight: 25}}>Sexo:</span>
                             <input className="form-check-input" type="radio" name="inlineRadioOptions" id="masculino" value="option1" />
@@ -82,7 +79,7 @@ const TabHome = () => {
                         </div>  
                        </div>                                             
                     </div>
-                    <div className="form-group col-md-6">
+                    <div className="form-group col-md-4">
                         <label htmlFor="orientacao">Orientação sexual</label>
                         <select className="form-control" id="orientacao">
                         <option>Omitir</option>
@@ -90,6 +87,16 @@ const TabHome = () => {
                         <option>Homossexual</option>
                         <option>Transgênero</option>
                         <option>Bissexual</option>
+                        </select>
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="estadocivil">Estado civil</label>
+                        <select className="form-control" id="estadocivil">
+                        <option>Amasiado</option>
+                        <option>Casado</option>
+                        <option>Divorciado</option>
+                        <option>Separado</option>
+                        <option>Solteiro</option>
                         </select>
                     </div>
                 </div>
