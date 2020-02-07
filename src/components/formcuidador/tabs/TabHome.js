@@ -1,13 +1,15 @@
 import React from 'react'
 
+import '../StarScore.css'
 import StarScore from '../StarScore'
+
 
 const TabHome = () => {
     return (
         <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <StarScore />
         <div className="row col-md-12" style={{background: "#dadada"}}>                    
-            <h3 className="dark alert-dark" style={{padding: 8}}>Dados pessoais</h3>
+            <span style={{padding: 8}}>Dados pessoais</span>
         </div>
             <form style={{paddingTop: 50}}>
                 <div className="row">
