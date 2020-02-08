@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './StarScore.css'
+
 const StarScore = () => {
     return (
             <div className="float-right">

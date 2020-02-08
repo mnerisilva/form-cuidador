@@ -1,6 +1,8 @@
 import React from 'react'
 
 import '../StarScore.css'
+import './TabHome.css'
+import FormSectionTitle from '../FormSectionTitle'
 import StarScore from '../StarScore'
 
 
@@ -8,10 +10,8 @@ const TabHome = () => {
     return (
         <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <StarScore />
-        <div className="row col-md-12" style={{background: "#dadada"}}>                    
-            <span style={{padding: 8}}>Dados pessoais</span>
-        </div>
-            <form style={{paddingTop: 50}}>
+        <FormSectionTitle title="Informações pessoais" />
+            <form>
                 <div className="row">
                     <div className="form-group col-md-2">
                         <label htmlFor="exampleFormControlInput1">CPF</label>
@@ -27,7 +27,7 @@ const TabHome = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="form-group col-md-4">
+                <div className="form-group col-md-4">
                         <label htmlFor="rg">RG</label>
                         <input type="text" className="form-control" id="rg" placeholder="" />
                     </div>

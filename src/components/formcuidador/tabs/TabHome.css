@@ -1,0 +1,7 @@
+.tab-pane form {
+    padding-top: 30px !important;
+    border: solid thin #dadada;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
