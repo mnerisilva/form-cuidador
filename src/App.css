@@ -14,6 +14,7 @@ body .container {
   box-shadow: 3px -4px 5px -1px rgba(184,178,184,1);
   font-size: 1.3em;
   font-weight: 700;
+  background-color: #f8f9fa;
 }
 
 .nav-tabs .nav-link {
@@ -25,5 +26,6 @@ body .container {
   border-left: solid thin #e9ecef;
   border-bottom: solid thin #e9ecef;
   border-right: solid thin #e9ecef;
+  background-color: #f8f9fa;
 
 }
