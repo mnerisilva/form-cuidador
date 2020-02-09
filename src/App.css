@@ -1,3 +1,29 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
 body .container {
   background-image: url('./img/pattern.png');
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #000000 !important;
+  -webkit-box-shadow: 3px -4px 5px -1px rgba(184,178,184,1);
+  -moz-box-shadow: 3px -4px 5px -1px rgba(184,178,184,1);
+  box-shadow: 3px -4px 5px -1px rgba(184,178,184,1);
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.nav-tabs .nav-link {
+  font-size: 1.3em;
+  font-weight: 700;  
+}
+
+.tab-pane {
+  border-left: solid thin #e9ecef;
+  border-bottom: solid thin #e9ecef;
+  border-right: solid thin #e9ecef;
+
 }
