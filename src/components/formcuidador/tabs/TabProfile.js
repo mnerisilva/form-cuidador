@@ -8,7 +8,7 @@ import StarScore from '../StarScore'
 const TabProfile = () => {
     return (
         <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <StarScore />
+            <StarScore />
         <FormSectionTitle title="Informações profissionais" />
             <form>
             </form>            
