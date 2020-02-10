@@ -1,6 +1,10 @@
+
+@import url(https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400);
+
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Raleway', sans-serif;
 }
 
 body .container {
@@ -28,4 +32,8 @@ body .container {
   border-right: solid thin #e9ecef;
   background-color: #f8f9fa;
 
+}
+
+#svg8 #amarelo {
+  fill: blue;
 }
