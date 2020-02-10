@@ -22,15 +22,15 @@ class TabHome extends Component {
                 <form>
                     <div className="row">
                         <div className="form-group col-md-2">
-                            <label htmlFor="exampleFormControlInput1">CPF</label>
+                            <label htmlFor="exampleFormControlInput1">CPF <i class="far fa-question-circle"></i></label>
                             <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
                         </div>
                         <div className="form-group col-md-5">
-                            <label htmlFor="nome">Nome</label>
+                            <label htmlFor="nome">Nome <i class="far fa-question-circle"></i></label>
                             <input type="text" className="form-control" id="nome" placeholder="" />
                         </div>
                         <div className="form-group col-md-5">
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="email">Email <i class="far fa-question-circle"></i></label>
                             <input type="email" className="form-control" id="email" placeholder="" />
                         </div>
                     </div>
