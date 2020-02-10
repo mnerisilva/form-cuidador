@@ -3,3 +3,22 @@
     color: #ffe793;
     color: #ecc849;
 }
+
+
+.fundo {
+    position: relative;
+    margin: 0 auto;
+    width: 160px !important;
+    height: 45px;
+    background: url(../../img/star_.svg) 0/auto repeat-x;
+    background-size: 33px !important;
+    margin-right: 10px;
+}
+
+.primeiro-plano {
+    position: absolute;
+    width: 160px;
+    height: 45px;
+    background: url(../../img/star.svg) 0/auto repeat-x;
+    background-size: 33px;
+}
