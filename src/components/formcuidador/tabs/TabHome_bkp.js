@@ -4,7 +4,6 @@ import '../StarScore.css'
 import './TabHome.css'
 import FormSectionTitle from '../FormSectionTitle'
 import StarScore from '../StarScore'
-//import { render } from '@testing-library/react'
 
 
 class TabHome_bkp extends Component {
