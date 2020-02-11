@@ -7,18 +7,15 @@ import StarScore from '../StarScore'
 //import { render } from '@testing-library/react'
 
 
-class TabHome extends Component {
+class TabHome_bkp extends Component {
     constructor(props){
         super(props);
 
         this.state = {
             width_percentual: 70+"%"
-
         };
-
     }
 
-    
 
 
     render(){
@@ -26,15 +23,15 @@ class TabHome extends Component {
             <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <StarScore width_percentual={this.state.width_percentual} />
             <FormSectionTitle title="Informações pessoais" />
-                <form>
+                <form >
                     <div className="row">
                         <div className="form-group col-md-2">
                             <label htmlFor="exampleFormControlInput1">CPF <i className="far fa-question-circle"></i></label>
-                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
+                            <input type="text" className="form-control" id="exampleFormControlInput1" name="cpf" placeholder="" />
                         </div>
                         <div className="form-group col-md-5">
                             <label htmlFor="nome">Nome <i className="far fa-question-circle"></i></label>
-                            <input type="text" className="form-control" id="nome" placeholder="" />
+                            <input type="text" className="form-control" id="nome" name="nome" placeholder="" />
                         </div>
                         <div className="form-group col-md-5">
                             <label htmlFor="email">Email <i className="far fa-question-circle"></i></label>
@@ -128,4 +125,4 @@ class TabHome extends Component {
     }
 }
 
-export default TabHome
+export default TabHome_bkp
