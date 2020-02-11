@@ -65,7 +65,7 @@ class TabHome extends Component {
                     </div>
 
                     <div className="row">
-                        <input className="btn btn-primary" type="submit"  value="Enviar" />
+                        <input className="btn btn-primary" type="submit"  value="Salvar" />
                     </div>
                 </form>           
             </div>        
