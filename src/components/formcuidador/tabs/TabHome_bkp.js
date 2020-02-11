@@ -39,7 +39,7 @@ class TabHome_bkp extends Component {
                         </div>
                     </div>
                     <div className="row">
-                    <div className="form-group col-md-4">
+                        <div className="form-group col-md-4">
                             <label htmlFor="rg">RG</label>
                             <input type="text" className="form-control" id="rg" placeholder="" />
                         </div>

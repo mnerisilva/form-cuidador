@@ -6,123 +6,69 @@ import FormSectionTitle from '../FormSectionTitle'
 import StarScore from '../StarScore'
 //import { render } from '@testing-library/react'
 
+import { cpfMask } from './mask'
+
 
 class TabHome extends Component {
     constructor(props){
         super(props);
-
         this.state = {
-            width_percentual: 70+"%"
-
-        };
-
-    }
-
+            cpf: '',
+            nome: '',
+            email: '',
+            width_percentual: 1+"%"
+    };
     
-
-
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+    
+      handleChange(event) {
+          if(event.target.name === 'cpf'){
+            this.setState({cpf: cpfMask(event.target.value)});
+            this.setState({width_percentual: 30+"%"});
+          }else{
+              if(event.target.name === 'nome'){
+                this.setState({nome: event.target.value});
+                this.setState({width_percentual: 60+"%"}); 
+              }else{
+                this.setState({email: event.target.value});
+                this.setState({width_percentual: 100+"%"}); 
+              }
+          }
+      }
+    
+      handleSubmit(event) {
+        console.log('Um cpf foi enviado: ' + this.state.cpf);
+        console.log('Um nome foi enviado: ' + this.state.nome);
+        console.log('Um e-mail foi enviado: ' + this.state.email);
+        event.preventDefault();
+      }
     render(){
         return (
             <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <StarScore width_percentual={this.state.width_percentual} />
             <FormSectionTitle title="Informações pessoais" />
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <div className="row">
                         <div className="form-group col-md-2">
-                            <label htmlFor="exampleFormControlInput1">CPF <i className="far fa-question-circle"></i></label>
-                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="" />
+                            <label htmlFor="cpf">Cpf</label>                            
+                            <input type="text" className="form-control" id="cpf" name="cpf" value={this.state.cpf} onChange={this.handleChange} />
                         </div>
                         <div className="form-group col-md-5">
-                            <label htmlFor="nome">Nome <i className="far fa-question-circle"></i></label>
-                            <input type="text" className="form-control" id="nome" placeholder="" />
+                            <label htmlFor="nome">Nome</label>
+                            <input type="text" className="form-control" id="nome"  name="nome" value={this.state.nome} onChange={this.handleChange} />
                         </div>
                         <div className="form-group col-md-5">
-                            <label htmlFor="email">Email <i className="far fa-question-circle"></i></label>
-                            <input type="email" className="form-control" id="email" placeholder="" />
+                            <label htmlFor="email">E-mail</label>
+                            <input type="email" className="form-control" id="email"  name="email" value={this.state.email} onChange={this.handleChange} />
                         </div>
                     </div>
+
                     <div className="row">
-                    <div className="form-group col-md-4">
-                            <label htmlFor="rg">RG</label>
-                            <input type="text" className="form-control" id="rg" placeholder="" />
-                        </div>
-                        <div className="form-group col-md-4">
-                            <label htmlFor="emissao">Emissão</label>
-                            <input type="text" className="form-control" id="emissao" placeholder="" />
-                        </div>
-                        <div className="form-group col-md-4">
-                            <label htmlFor="orgao">Orgão Emissor</label>
-                            <input type="text" className="form-control" id="orgao" placeholder="" />
-                        </div>
+                        <input className="btn btn-primary" type="submit"  value="Enviar" />
                     </div>
-                    <div className="row">
-                        <div className="form-group col-md-6">
-                            <label htmlFor="endereco">Endereço</label>
-                            <input type="text" className="form-control" id="endereco" placeholder="" />
-                        </div>
-                        <div className="form-group col-md-2">
-                            <label htmlFor="numero">Número</label>
-                            <input type="text" className="form-control" id="numero" placeholder="" />
-                        </div>
-                        <div className="form-group col-md-4">
-                            <label htmlFor="complemento">Complemento</label>
-                            <input type="text" className="form-control" id="complemento" placeholder="" />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="form-group col-md-4">
-                            <label htmlFor="bairro">Bairro</label>
-                            <input type="text" className="form-control" id="bairro" placeholder="" />
-                        </div>
-                        <div className="form-group col-md-3">
-                            <label htmlFor="cep">Cep</label>
-                            <input type="text" className="form-control" id="cep" placeholder="" />
-                        </div>
-                        <div className="form-group col-md-4">
-                            <label htmlFor="municipio">Município</label>
-                            <input type="text" className="form-control" id="municipio" placeholder="" />
-                        </div>
-                        <div className="form-group col-md-1">
-                            <label htmlFor="uf">UF</label>
-                            <input type="text" className="form-control" id="uf" placeholder="" />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="form-group col-md-4">
-                        <div className="sex-wrapper" style={{backgroundColor: "#dadada1a", border: "solid thin #dadada", paddingLeft: 10, height: "4.4em"}}>
-                            <div className="form-check form-check-inline">
-                                <span style={{paddingRight: 25}}>Sexo:</span>
-                                <input className="form-check-input" type="radio" name="inlineRadioOptions" id="masculino" value="option1" />
-                                <label className="form-check-label" htmlFor="masculino">Masculino</label>
-                            </div>
-                            <div className="form-check form-check-inline">
-                                <input className="form-check-input" type="radio" name="inlineRadioOptions" id="feminino" value="option2" />
-                                <label className="form-check-label" htmlFor="feminino">Feminino</label>
-                            </div>  
-                        </div>                                             
-                        </div>
-                        <div className="form-group col-md-4">
-                            <label htmlFor="orientacao">Orientação sexual</label>
-                            <select className="form-control" id="orientacao">
-                            <option>Omitir</option>
-                            <option>Heterossexual</option>
-                            <option>Homossexual</option>
-                            <option>Transgênero</option>
-                            <option>Bissexual</option>
-                            </select>
-                        </div>
-                        <div className="form-group col-md-4">
-                            <label htmlFor="estadocivil">Estado civil</label>
-                            <select className="form-control" id="estadocivil">
-                            <option>Amasiado</option>
-                            <option>Casado</option>
-                            <option>Divorciado</option>
-                            <option>Separado</option>
-                            <option>Solteiro</option>
-                            </select>
-                        </div>
-                    </div> 
-                </form>
+                </form>           
             </div>        
         );
     }
