@@ -33,7 +33,7 @@ class TabHome extends Component {
           let soma = 100;
           const arrayFields = ['cpf','nome','email','rg','emissao', 'orgao'];
             arrayFields.map( id => {
-                if(this.state[id] !== ''){
+                if(this.state[id]){
                     this.setState({
                       width_percentual: this.state.width_percentual + 16
                     });
