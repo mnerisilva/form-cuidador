@@ -15,7 +15,10 @@ class TabHome extends Component {
             cpf: '',
             nome: '',
             email: '',
-            width_percentual: 1+"%"
+            rg: '',
+            emissao: '',
+            orgao: '',
+            width_percentual: 4
     };
     
         this.handleChange = this.handleChange.bind(this);
@@ -23,24 +26,27 @@ class TabHome extends Component {
       }
     
       handleChange(event) {
-          if(event.target.name === 'cpf'){
-            this.setState({cpf: cpfMask(event.target.value)});
-            this.setState({width_percentual: 30+"%"});
-          }else{
-              if(event.target.name === 'nome'){
-                this.setState({nome: event.target.value});
-                this.setState({width_percentual: 60+"%"}); 
-              }else{
-                this.setState({email: event.target.value});
-                this.setState({width_percentual: 100+"%"}); 
-              }
-          }
+        const target = event.target;
+        let value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;        
+        value = name === 'cpf' ? cpfMask(target.value) : target.value;
+    
+        this.setState({
+            [name]: value
+        });  
+
+        this.setState({
+            width_percentual: this.state.width_percentual + 16
+          });
       }
     
       handleSubmit(event) {
         console.log('Um cpf foi enviado: ' + this.state.cpf);
         console.log('Um nome foi enviado: ' + this.state.nome);
         console.log('Um e-mail foi enviado: ' + this.state.email);
+        console.log('Um rg foi enviado: ' + this.state.rg);
+        console.log('Um emissão foi enviado: ' + this.state.emissao);
+        console.log('Um orgão foi enviado: ' + this.state.orgao);
         event.preventDefault();
       }
     render(){
@@ -61,6 +67,22 @@ class TabHome extends Component {
                         <div className="form-group col-md-5">
                             <label htmlFor="email">E-mail</label>
                             <input type="email" className="form-control" id="email"  name="email" value={this.state.email} onChange={this.handleChange} />
+                        </div>
+                    </div>
+
+
+                    <div className="row">
+                        <div className="form-group col-md-4">
+                            <label htmlFor="rg">RG</label>
+                            <input type="text" className="form-control" id="rg"  name="rg" value={this.state.rg} onChange={this.handleChange} />
+                        </div>
+                        <div className="form-group col-md-4">
+                            <label htmlFor="emissao">Emissão</label>
+                            <input type="text" className="form-control" id="emissao"  name="emissao" value={this.state.emissao} onChange={this.handleChange} />
+                        </div>
+                        <div className="form-group col-md-4">
+                            <label htmlFor="orgao">Orgão Emissor</label>
+                            <input type="text" className="form-control" id="orgao"  name="orgao" value={this.state.orgao} onChange={this.handleChange} />
                         </div>
                     </div>
 
