@@ -30,42 +30,17 @@ class TabHome extends Component {
       }
 
       handleFocus(event) {
-          let soma = 4;
           const arrayFields = ['cpf','nome','email','rg','emissao', 'orgao'];
-          console.log('entrou no hangleFocus')
-          arrayFields.map( id => {
-              console.log(id+'-'+this.state[id])
-          })
             let contador = 0;
             arrayFields.map( id => {
                 if(this.state[id]){
-                    console.log('não é nulo')
-                    //this.setState({
-                     // width_percentual: this.state.width_percentual + 16
-                    //});
                     contador++
-                }/* else {
-                    this.setState({
-                      width_percentual: this.state.width_percentual - 16
-                    });*/
-                    //soma = soma - 16;
-                //}
+                }
                 this.setState({
-                      width_percentual: contador*16
-                    });
+                      width_percentual: contador * 16
+                    });                
+                 return true;
             })
-           
-          //console.log('foco no campo: ' + event.target.name)
-          //console.log('foco no campo: ' + this.state.cpf)
-          //console.log('foco no campo: ' + this.state.nome)
-          //console.log('foco no campo: ' + this.state.email)
-         // console.log('foco no campo: ' + this.state.rg)
-          //console.log('foco no campo: ' + this.state.emissao)
-          //console.log('foco no campo: ' + this.state.orgao)
-          //console.log('Soma: '+this.state.width_percentual)
-          //console.log('Soma: '+soma)
-
-          
       }
       
       handleChange(event) {
@@ -77,19 +52,9 @@ class TabHome extends Component {
         this.setState({
             [name]: value
         });  
-
-        /*this.setState({
-            width_percentual: this.state.width_percentual + 16
-          });*/
       }
     
       handleSubmit(event) {
-        //console.log('Um cpf foi enviado: ' + this.state.cpf);
-        //console.log('Um nome foi enviado: ' + this.state.nome);
-        //console.log('Um e-mail foi enviado: ' + this.state.email);
-        //console.log('Um rg foi enviado: ' + this.state.rg);
-        //console.log('Um emissão foi enviado: ' + this.state.emissao);
-        //console.log('Um orgão foi enviado: ' + this.state.orgao);
         event.preventDefault();
       }
 
