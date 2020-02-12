@@ -30,20 +30,29 @@ class TabHome extends Component {
       }
 
       handleFocus(event) {
-          let soma = 100;
+          let soma = 4;
           const arrayFields = ['cpf','nome','email','rg','emissao', 'orgao'];
+          console.log('entrou no hangleFocus')
+          arrayFields.map( id => {
+              console.log(id+'-'+this.state[id])
+          })
+            let contador = 0;
             arrayFields.map( id => {
                 if(this.state[id]){
-                    this.setState({
-                      width_percentual: this.state.width_percentual + 16
-                    });
-                    soma = soma + 16;
-                } else {
+                    console.log('não é nulo')
+                    //this.setState({
+                     // width_percentual: this.state.width_percentual + 16
+                    //});
+                    contador++
+                }/* else {
                     this.setState({
                       width_percentual: this.state.width_percentual - 16
+                    });*/
+                    //soma = soma - 16;
+                //}
+                this.setState({
+                      width_percentual: contador*16
                     });
-                    soma = soma - 16;
-                }
             })
            
           //console.log('foco no campo: ' + event.target.name)
@@ -54,7 +63,7 @@ class TabHome extends Component {
           //console.log('foco no campo: ' + this.state.emissao)
           //console.log('foco no campo: ' + this.state.orgao)
           //console.log('Soma: '+this.state.width_percentual)
-          console.log('Soma: '+soma)
+          //console.log('Soma: '+soma)
 
           
       }
@@ -123,7 +132,7 @@ class TabHome extends Component {
                     </div>
 
                     <div className="row">
-                        <input className="btn btn-primary" type="submit"  value="Salvar" />
+                        <input className="btn btn-primary" type="submit" onFocus={this.handleFocus} value="Salvar" />
                     </div>
                 </form>           
             </div>        

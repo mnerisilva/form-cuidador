@@ -6,7 +6,7 @@ const StarScore = (prop) => {
     return (
             <div className="float-right">
                 <div className="fundo">
-                    <div className="primeiro-plano" style={{width: prop.width_percentual+"%", transition: "width "+2+"s"}}>
+                    <div className="primeiro-plano" style={{width: prop.width_percentual+"%", transition: "width "+1+"s"}}>
                     </div>
                 </div>          
             </div>    
